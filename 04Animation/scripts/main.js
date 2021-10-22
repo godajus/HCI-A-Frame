@@ -14,8 +14,8 @@ var myBox = document.getElementById('myBox');
 	 
 	 
 	 
-	 myBox.object3D.rotation.x += rotationSpeed2;
- 	console.log(myBox.object3D.rotation.x);
+	 myBox.object3D.rotation.y += rotationSpeed2;
+ 	console.log(myBox.object3D.rotation.y);
 	rotationSpeed2 += 0.001;
 	if (rotationSpeed2 > 1) {
 		rotationSpeed2 = 0.01;
