@@ -1,4 +1,3 @@
-
 var rotationSpeed = 0.001;
 var rotationSpeed2 = 0.001;
 var myOtherBox = document.getElementById('myOtherBox');
@@ -14,6 +13,7 @@ function spin(){
 }
 
 setInterval(spin, 16);
+
 
 myBox.addEventListener('mouseenter', function(){
  	rotationSpeed2 = 0.01;
