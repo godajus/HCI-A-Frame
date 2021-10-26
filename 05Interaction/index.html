@@ -54,6 +54,27 @@
         height="100" 
         color="#7BC8A4" 
         material="src: #grass; repeat: 10 10"
+        shadow
+          animation__mouseenter="
+          property: components.material.material.color; 
+          type: color; 
+          to: yellow; 
+          startEvents: mouseenter; 
+          dur: 500;"
+        animation__mouseleave="
+          property: components.material.material.color; 
+          type: color; 
+          to: pink; 
+          startEvents: mouseleave; 
+          dur: 500;">  
+      </a-box>
+      <a-plane id="ground"
+        position="0 0 -4" 
+        rotation="-90 0 0" 
+        width="100" 
+        height="100" 
+        color="#7BC8A4" 
+        material="src: #grass; repeat: 10 10"
         shadow>
       </a-plane> 
     </a-scene>
