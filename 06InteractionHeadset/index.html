@@ -13,18 +13,13 @@
           <img id="wood" src="images/wood.jpg" />
           <img id="wood2" src="images/wood2.jpg" />
           <img id="grass" src="images/grass.jpg" />
+        <img id="cat" src="images/toppng.com-whats-the-origin-of-the-crying-cat-pictures-and-why-crying-cat-meme-with-hearts-1024x888.png">
       </a-assets>
 
       <a-camera>
-        <a-entity id="mouseCursor"
-          cursor="fuse: true; fuseTimeout: 1500">
+        <a-entity id="mouseCursor" cursor="rayOrigin: mouse; fuse: true; fuseTimeout: 1500">
         </a-entity>
-        <a-ring id="cursorRing" 
-          position="0 0 -1"
-          radius-inner= "0.02"
-          radius-outer= "0.03"
-          material="color: red; shader: flat">
-        </a-ring>
+        <a-image id="cursorRing" src="#cat" position="0 0 -1" width="0.2" height="0.2"></a-image>
       </a-camera>
       
       <a-box id="myBox" 
@@ -55,7 +50,19 @@
         height="1" 
         depth="1" 
         src="#wood2"
-        shadow>  
+        shadow
+             animation__mouseenter="
+          property: components.material.material.color; 
+          type: color; 
+          to: green; 
+          startEvents: mouseenter; 
+          dur: 500;"
+        animation__mouseleave="
+          property: components.material.material.color; 
+          type: color; 
+          to: yellow; 
+          startEvents: mouseleave; 
+          dur: 500;">  >  
       </a-box>
       <a-plane id="ground"
         position="0 0 -4" 
